@@ -10,13 +10,13 @@ STRIP ?= strip
 # Generate dependency files alongside the object files
 FLAGS += -MMD -MP
 # Debugger symbols. These are removed with `strip`.
-FLAGS += -g
+FLAGS +=
 # Optimization
-FLAGS += -O3 -march=nocona -funsafe-math-optimizations
+FLAGS += -O3 -march=nehalem -mtune=native -s
 # Warnings
 FLAGS += -Wall -Wextra -Wno-unused-parameter
 # C++ standard
-CXXFLAGS += -std=c++11
+CXXFLAGS += -std=c++17
 
 # Architecture-independent flags
 ifdef ARCH_LIN

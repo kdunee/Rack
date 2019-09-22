@@ -5,7 +5,7 @@ DEP_LOCAL ?= dep
 $(shell mkdir -p $(DEP_LOCAL))
 DEP_PATH := $(abspath $(DEP_LOCAL))
 
-DEP_FLAGS += -g -O3 -march=nocona
+DEP_FLAGS += -O3 -march=nehalem -mtune=native -s
 
 ifeq ($(ARCH), mac)
 	DEP_MAC_SDK_FLAGS := -mmacosx-version-min=10.7
